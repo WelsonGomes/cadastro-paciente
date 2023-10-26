@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-item-border {
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.nav-link {
+    padding: 0px 10px;
+    color: white;
+}
