@@ -1,27 +1,18 @@
-# React + TypeScript + Vite
+# Monitoramento-Paciente
+Desenvolvimento de Sistema de Monitoramento de Pacientes para Unidade de Saúde.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    ->Sistema permite incluir um paciente, e automaticamente ele já vai estar na lista de pascientes que estão sendo 
+        medido a pressão.
 
-Currently, two official plugins are available:
+    ->A medição acontece a acada 10s.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    ->Cada paciente tem um hostorico de 5 medições anteriores;
 
-## Expanding the ESLint configuration
+    ->Pode ser filtrado por nome, idade e data mas como a data para todos é muito proxima acaba não sendo muito eficiente.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+    ->Tendo também a opção de ver o historico do paciente filtrado ou o historico de todos os pacientes.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+    ->Cada vez q um paciente tem alteração em sua temperatura, frequencia cardiaca ou Saturação de oxigênio informa com 
+        cores difetentes não exibe uma mensagem para cada alerta pois como cada 10s tem variação o usario não ia conseguir 
+        ficar acompanhando e sim so feichando mensagens de alerta, assim cada cor vai representar o estado de cada exame.
+    
